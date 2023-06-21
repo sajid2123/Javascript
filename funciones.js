@@ -12,4 +12,5 @@ miFuncion(1,2);
 function saludarEstudiantes(estudiante){
     console.log(`Hola ${estudiante}`);
 }
+saludarEstudiantes("Sajid");
 
