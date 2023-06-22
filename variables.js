@@ -1,4 +1,4 @@
-var nombre = "Sajid";
+
 
 //declarar
 var edad;
@@ -9,6 +9,7 @@ edad = 20;
 //Array
 var elementos = ["monitor","telefono"];
 
+var nombre;
 //objeto
 var persona = {
     nombre: "Sajid",

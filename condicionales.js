@@ -20,7 +20,7 @@ function fun(jugador,otroJugador){
         resultado = "Perdiste"
     }else if(jugador === "piedra" && maquina === "tijeras") {
         resultado = "Ganaste"
-    }else if(jugador === "papel" && maquina === "piedra") {
+    }else if(jugador === "papel" && maquina === "piedra") {itch
         resultado = "ganaste"
     }else if(jugador === "papel" && maquina === "tijeras") {
         resultado = "Perdiste"
