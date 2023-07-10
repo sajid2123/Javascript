@@ -99,15 +99,16 @@ input {
 }
 
 .list ul {
+<<<<<<< HEAD
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+=======
   list-style: none;
   width: 80%;
-  overflow: scroll;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.2rem;
-  justify-content: center;
-  align-content: start;
+  display: flex;
+  justify-content: space-between;
+>>>>>>> 00b8127250c7b5eae5bc13223cadc4d4a0c6f5b9
 }
 
 .list li {
