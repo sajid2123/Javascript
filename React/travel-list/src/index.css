@@ -77,19 +77,37 @@ input {
   background-color: #76c7ad;
 }
 
-.list {
+.main {
   background-color: #5a3e2b;
   color: #ffebb3;
   padding: 4rem 0;
-
+}
+.list {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
-
   align-items: flex-start;
 }
 
-.actions button,
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.actions select {
+  text-transform: uppercase;
+  padding: 0.6rem 2.4rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0.8rem;
+}
+.actions button {
+  text-transform: uppercase;
+  padding: 0.6rem 2.4rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0.8rem;
+}
 .list select {
   text-transform: uppercase;
   padding: 0.8rem 2.4rem;
