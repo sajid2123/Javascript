@@ -99,16 +99,14 @@ input {
 }
 
 .list ul {
-<<<<<<< HEAD
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-=======
+
   list-style: none;
   width: 80%;
   display: flex;
   justify-content: space-between;
->>>>>>> 00b8127250c7b5eae5bc13223cadc4d4a0c6f5b9
 }
 
 .list li {
@@ -138,6 +136,6 @@ input[type="checkbox"] {
   font-weight: 700;
   padding: 3.2rem 0;
 }
-.packed-items{
+.packed-items {
   text-decoration: line-through;
 }
