@@ -101,6 +101,9 @@ input {
   font-weight: 700;
   margin: 0 0.8rem;
 }
+.items {
+  margin-bottom: 120px;
+}
 .actions button {
   text-transform: uppercase;
   padding: 0.6rem 2.4rem;
