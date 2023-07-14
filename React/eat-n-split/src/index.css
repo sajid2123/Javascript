@@ -1,0 +1,14 @@
+.form {
+  background-color: burlywood;
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  padding: 10px;
+  border-radius: 10px;
+}
+.flex {
+  display: flex;
+}
+.btn{
+  
+}

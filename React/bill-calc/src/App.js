@@ -36,6 +36,7 @@ export default function App() {
           myTip={tipCalculator(myService)}
           myFriendTip={tipCalculator(friendService)}
         />
+        <div className="line"></div>
         <Reset
           setBill={setBill}
           setMyService={setMyService}
