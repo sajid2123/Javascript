@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./index.css";
 
-export default function AddFriend() {
-  const [name, setName] = useState("");
-  const [url, setUrl] = useState("https://i.pravatar.cc/48/");
-
-  function handleSubmit(e) {
-    e.preventDefault();
-  }
+export default function AddFriendForm({
+  name,
+  url,
+  setName,
+  setUrl,
+  handleSubmit,
+}) {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <div className="flex">
@@ -23,7 +23,7 @@ export default function AddFriend() {
       </div>
       <div className="flex">
         <label>🙀 Image url</label>
-        <input type="text" value={url}></input>
+        <input readOnly type="text" value={url}></input>
       </div>
       <button>Add</button>
     </form>
