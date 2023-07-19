@@ -16,6 +16,9 @@ export default function App() {
   function handleDelete(id) {
     setTaskList((taskList) => taskList.filter((task) => task.id !== id));
   }
+  function handleClearList() {
+    setTaskList([]);
+  }
   return (
     <div className="h-screen">
       <Logo />
@@ -24,8 +27,9 @@ export default function App() {
         taskList={taskList}
         onToggleTask={handleToggle}
         onDelete={handleDelete}
+        onClearList={handleClearList}
       />
-      <Footer />
+      <Stats taskList={taskList} />
     </div>
   );
 }
@@ -74,14 +78,23 @@ function TaskForm({ onAddTask }) {
     </form>
   );
 }
-function TaskList({ taskList, onToggleTask, onDelete }) {
-  const sortedList = taskList;
+function TaskList({ taskList, onToggleTask, onDelete, onClearList }) {
+  const [sortBy, setSortBy] = useState("input");
+  let sortedList;
 
-  if()
+  if (sortBy === "input") {
+    sortedList = taskList;
+  } else if (sortBy === "alphabetic") {
+    sortedList = taskList.slice().sort((a, b) => a.task.localeCompare(b.task));
+  } else if (sortBy === "undone") {
+    sortedList = taskList
+      .slice()
+      .sort((a, b) => Number(a.done) - Number(b.done));
+  }
 
   return (
-    <div className=" bg-orange-400 h-4/6 p-10 flex justify-evenly flex-wrap">
-      {taskList.map((task) => (
+    <div className="bg-orange-400 h-4/6 p-10 flex justify-evenly flex-wrap">
+      {sortedList.map((task) => (
         <Task
           id={task.id}
           task={task.task}
@@ -91,12 +104,27 @@ function TaskList({ taskList, onToggleTask, onDelete }) {
           onDelete={onDelete}
         />
       ))}
-      <div>
-        
+      <div className="mt-96 fixed">
+        <select
+          className="bg-black text-white rounded pb-1 px-2"
+          value={sortBy}
+          onChange={(e) => setSortBy(e.target.value)}
+        >
+          <option value="input">Sort by input</option>
+          <option value="alphabetic">Sort by alphabetic order</option>
+          <option value="undone">Sort by undone tasks</option>
+        </select>
+        <button
+          className="ml-5 bg-black text-white rounded px-2 pb-1"
+          onClick={onClearList}
+        >
+          Clear List
+        </button>
       </div>
     </div>
   );
 }
+
 function Task({ id, task, done, onToggleTask, onDelete }) {
   return (
     <div className="flex items-start">
@@ -125,10 +153,21 @@ function Task({ id, task, done, onToggleTask, onDelete }) {
   );
 }
 
-function Footer() {
+function Stats({ taskList }) {
+  const length = taskList.length;
+  const taskDone = taskList.filter((task) => task.done !== false).length;
+
   return (
     <div className="flex justify-center items-center text-2xl font-mono h-24 bg-amber-700  text-black">
-      <h1>You have no task done yet!!!</h1>
+      {length === 0 ? (
+        <h1>You have no task right now</h1>
+      ) : length !== 0 && length === taskDone ? (
+        <h1>You have done all the tasks.</h1>
+      ) : (
+        <h1>
+          You have {length} tasks and you have done {taskDone}
+        </h1>
+      )}
     </div>
   );
 }
