@@ -23,8 +23,7 @@ export default function App() {
     <div>
       <Tabbed content={content} />
     </div>
-  );
-}
+  );g
 
 function Tabbed({ content }) {
   const [activeTab, setActiveTab] = useState(0);
