@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/x-icon" href="../img/wordle.png">
+    <title>WOORDLE</title>
+</head>
+<body>
+    <div id="juego">
+        <!-- Nav -->
+        <header>
+            <div>
+                <img src="../img/bandera.png" width="50px" height="50px">
+                <p>ES</p>
+            </div>
+            <h1>WOORDLE</h1>
+            <button id="botonReglas">Reglas</button>
+        </header>
+        <!-- Bloque de palabras -->
+        <div id="tabla">
+
+        </div>
+        <!-- Teclado -->
+        <div id="teclado">
+
+        </div>
+    </div>
+    <div id="gameOver">
+        <div id="content">
+            <h3 >El juego se ha acabado!</h3>
+            <p id="mensajeSiHasAdivinadoONo" class="mensajeSiHasAdivinadoONo"></p>
+            <button id="reiniciar">Reiniciar</button>
+        </div>
+    </div>
+    <div id="reglas">
+        <div id="contenidoReglas">
+            <h1>Reglas</h1>
+            <ul>
+                <li>El juego se juega con palabras de cinco letras.</li>
+                <li>El objetivo es adivinar la palabra secreta de cinco letras en el menor número de intentos posibles.</li>
+                <li>Después de cada intento, el juego proporciona pistas sobre la posición de las letras.</li>
+                <li>Si la letra es verde esta en la posición correcta, si es amarillo esta en la palabra pero la posición no es correcta y si es gris la letra no esta en la palabra.</li>
+                <li>Los jugadores tienen seis intentos, para adivinar la palabra secreta.</li>
+                <li>Las letras pueden repetirse en la palabra secreta, lo que aumenta la dificultad del juego.</li>
+                <li>Los jugadores deben utilizar su razonamiento lógico y habilidades lingüísticas para deducir la palabra secreta lo más rápido posible.</li>
+                <li>Ganar implica adivinar la palabra secreta con el menor número de intentos.</li>
+            </ul>
+            <button id="vale">Vale</button>
+        </div>
+    </div>
+    
+    <script src="../js/script.js"></script>
+</body>
+</html>
+
+
+

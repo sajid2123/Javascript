@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>El Ahorcado</title>
+</head>
+<body>
+    <div id="empezarJuego">
+        <div id="title">
+            <h1>El juego del Ahorcado</h1>
+        </div>
+        <div id="botones">
+            <button id="jugar">Empezar Juego</button>
+            <button id="botonReglas">Reglas</button>
+        </div>
+    </div>
+    <div id="juego" class="juego">
+        <div id="contenedor-1">
+            <p id="puntuacion"></p>
+            <div id="vidas"></div>
+            <p id="pista">💡PISTA</p>
+        </div>
+        <div id="contenedor-2">
+            <div id="palabraMostradaYInput">
+                <p id="palabra"></p>
+                <div id="form">
+                    <input type="text" id="letra" class="input"  maxlength="1" placeholder="Introduce una letra" >
+                    <button type="submit" id="probar">PROBAR</button>
+                </div>
+            </div>
+            <div id="historialLetras">
+                <div class="letrasCorrectas">
+                    <p>LETRAS CORRECTAS:</p>
+                    <p id="letrasCorrectas"></p>
+                </div>
+                <div class="letrasIncorrectas">
+                    <p>LETRAS INCORRECTAS:</p>
+                    <p id="letrasIncorrectas"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+    <div id="reglas">
+        <div id="contenidoReglas">
+            <h1>Reglas</h1>
+            <ul>
+                <li>El adivinador comienza a adivinar letras o palabras una por una.
+                    Si adivina una letra que está en la palabra secreta, se revela en su posición correcta en la palabra secreta.
+                    Si adivina incorrectamente, se cuenta como un intento fallido.</li>
+                <li>Límite de vidas: El juego se juega con un límite de 5 vidas. El adivinador debe adivinar la palabra secreta antes de agotar estos 5 vidas.</li>
+                <li>Puntuación:Al final del juego, se calcula la puntuación del jugador. Puedes conseguir 100 puntos en total. Cada intento restará 20 puntos. El objetivo es obtener la puntuación más alta posible sin superar los 5 vidas.</li>
+                <li>Pistas: Se incorpora una regla de pistas. El jugador puede solicitar una pista en cualquier momento del juego. Sin embargo, usar una pista restará 10 puntos de su puntuación total.</li>
+                <li>El adivinador pierde si agota los 5 vidas sin adivinar correctamente la palabra secreta.</li>
+                <li>El adivinador gana si adivina la palabra secreta antes de agotar los 5 vidas.</li>
+            </ul>
+            <button id="vale">Vale</button>
+        </div>
+    </div>
+    <div id="mensaje">
+        <div id="error">
+            <h3 id="tituloMensaje">Error!</h3>
+            <p id="contenidoMensaje"></p>
+            <button id="ok">Vale</button>
+        </div>
+    </div>
+    <div id="gameOver">
+        <div id="content">
+            <h3>El juego se ha acabado!</h3>
+            <p id="mensajeSiHasAdivinadoONo" class="mensajeSiHasAdivinadoONo"></p>
+            <button id="reiniciar">Reiniciar</button>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>
