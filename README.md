@@ -1,4 +1,4 @@
-# Project Title
+# Javascript
 
 This repository contains my JavaScript projects, which I am building while learning JavaScript.
 
